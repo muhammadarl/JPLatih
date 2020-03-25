@@ -33,8 +33,8 @@ public class Kalkulator extends javax.swing.JFrame {
         label3 = new java.awt.Label();
         NilaiA = new java.awt.TextField();
         NilaiB = new java.awt.TextField();
-        Hasil = new java.awt.TextField();
         hasil = new javax.swing.JButton();
+        jumlah = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,12 +52,6 @@ public class Kalkulator extends javax.swing.JFrame {
         NilaiA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NilaiAActionPerformed(evt);
-            }
-        });
-
-        Hasil.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HasilActionPerformed(evt);
             }
         });
 
@@ -88,8 +82,8 @@ public class Kalkulator extends javax.swing.JFrame {
                             .addComponent(hasil)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(NilaiA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(NilaiB, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
-                                .addComponent(Hasil, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(NilaiB, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE))
+                            .addComponent(jumlah))))
                 .addGap(63, 63, 63))
         );
         layout.setVerticalGroup(
@@ -107,10 +101,10 @@ public class Kalkulator extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(label3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Hasil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jumlah))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(hasil)
                 .addContainerGap())
         );
@@ -124,16 +118,12 @@ public class Kalkulator extends javax.swing.JFrame {
     int hasil = nilaiA + nilaiB;
     
     // tampilkan hasil ke label
-    Hasil.setText(String.valueOf(hasil));
+    jumlah.setText(String.valueOf(hasil));
     }//GEN-LAST:event_hasilActionPerformed
 
     private void NilaiAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NilaiAActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NilaiAActionPerformed
-
-    private void HasilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HasilActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_HasilActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,11 +162,11 @@ public class Kalkulator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.TextField Hasil;
     private java.awt.TextField NilaiA;
     private java.awt.TextField NilaiB;
     private javax.swing.JButton hasil;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jumlah;
     private java.awt.Label label1;
     private java.awt.Label label2;
     private java.awt.Label label3;

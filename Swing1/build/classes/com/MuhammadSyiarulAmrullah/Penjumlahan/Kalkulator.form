@@ -42,8 +42,8 @@
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="NilaiA" max="32767" attributes="0"/>
                               <Component id="NilaiB" pref="223" max="32767" attributes="0"/>
-                              <Component id="Hasil" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="jumlah" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -69,11 +69,11 @@
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="label3" max="32767" attributes="0"/>
-                  <Component id="Hasil" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="label3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jumlah" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="hasil" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -113,11 +113,6 @@
     </Component>
     <Component class="java.awt.TextField" name="NilaiB">
     </Component>
-    <Component class="java.awt.TextField" name="Hasil">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HasilActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="hasil">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hitung"/>
@@ -125,6 +120,8 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hasilActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jumlah">
     </Component>
   </SubComponents>
 </Form>
